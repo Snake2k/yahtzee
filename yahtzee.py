@@ -4,12 +4,14 @@ import yaht
 class Player:
     def __init__(self):
 
-        self.scores = {"ones": None, "twos": None, "threes": None, "fours": None, "fives": None, "sixes": None,
-                       "fh": None, "tk": None, "fk": None, "ss": None, "ls": None, "yahtzee": None, "chance": None}
-
         self.upper = ["ones", "twos", "threes", "fours", "fives", "sixes"]
 
         self.lower = ["fh", "tk", "fk", "ss", "ls", "yahtzee", "chance"]
+
+        self.scores = {}
+
+        for key in self.upper + self.lower:
+            self.scores[key] = None
 
         self.bonus = 0
 
